@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body class="body">
+  <header class="header">
+    <div>
+      <div class="player">
+        <div class="title-player"></div>
+        <div class="player-info">
+          <div class="player-controls">
+            <button class="play-prev player-icon"></button>
+            <button class="play player-icon"></button>
+            <button class="play-next player-icon"></button>
+          </div>
+          <div class="progress">
+            <div class="duration-player">
+              <div id="progress-active"></div>
+            </div>
+            <div class="duration-timer"></div>
+          </div>
+          <div class="song">
+            <div class="song-icon"><svg width="20" height="20" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M832 352v1088q0 26-19 45t-45 19-45-19l-333-333h-262q-26 0-45-19t-19-45v-384q0-26 19-45t45-19h262l333-333q19-19 45-19t45 19 19 45zm384 544q0 76-42.5 141.5t-112.5 93.5q-10 5-25 5-26 0-45-18.5t-19-45.5q0-21 12-35.5t29-25 34-23 29-36 12-56.5-12-56.5-29-36-34-23-29-25-12-35.5q0-27 19-45.5t45-18.5q15 0 25 5 70 27 112.5 93t42.5 142zm256 0q0 153-85 282.5t-225 188.5q-13 5-25 5-27 0-46-19t-19-45q0-39 39-59 56-29 76-44 74-54 115.5-135.5t41.5-173.5-41.5-173.5-115.5-135.5q-20-15-76-44-39-20-39-59 0-26 19-45t45-19q13 0 26 5 140 59 225 188.5t85 282.5zm256 0q0 230-127 422.5t-338 283.5q-13 5-26 5-26 0-45-19t-19-45q0-36 39-59 7-4 22.5-10.5t22.5-10.5q46-25 82-51 123-91 192-227t69-289-69-289-192-227q-36-26-82-51-7-4-22.5-10.5t-22.5-10.5q-39-23-39-59 0-26 19-45t45-19q13 0 26 5 211 91 338 283.5t127 422.5z" fill="#fff"/></svg>
+          </div>
+            <input type="range" class="input-song" min="0" max="1" step=".01" value=".5">
+          </div>
+        </div>
+        <ul class="play-list"></ul>
+      </div>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" value="Минск" placeholder="[Enter City]" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <div class="time-fixed">
+      <time class="time"></time>
+    </div>
+    <div class="date-fixed">
+      <date class="date"></date>
+    </div>
+    <div class="greeting-fixed">
+        <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name" placeholder="[Enter Name]" />
+      </div>
+    </div>
+   
+  </main>
+  <footer class="footer">
+    <div class="footer-settings">
+      <div class="footer-shadow visibleSection visibleSectionNone hidden">
+        <ul class="list-items">
+          <li>
+            <label for="language" class="label-language label-setting">Language</label>
+            <select name="language" id="language" class="select-setting">
+              <option value="en">en</option>
+              <option selected value="ru">ru</option>
+            </select></li>
+          <li>
+            <label for="sourse-background" class="label-background label-setting">Source Background Image</label>
+            <select name="sourse-background" id="source-background" class="select-setting">
+              <option value="0">GitHub</option>
+              <option selected value="1">Unsplash API</option>
+              <option value="2">Flickr API</option>
+            </select>
+          </li>
+          <li>
+            <label for="input-tags" class="label-tags label-setting">Tag</label>
+            <input type="text" name="input-tags" class="input-tags" placeholder="enter tag">
+          </li>
+          <li><h3 class="title-show">Show</h3></li>
+          <li>
+            <label for="time-input" class="time-label label-setting">Time</label>
+            <input type="checkbox" name="time-input" id="time-input">
+          </li>
+          <li>
+            <label for="date-input" class="date-label label-setting">Date</label>
+            <input type="checkbox" name="date-input" id="date-input">
+          </li>
+          <li>
+            <label for="greetings-input" class="greetings-label label-setting">Greetings</label>
+            <input type="checkbox" name="greetings-input" id="greetings-input">
+          </li>
+          <li>
+            <label for="quote-input" class="quote-label label-setting">Quote</label>
+            <input type="checkbox" name="quote-input" id="quote-input">
+          </li>
+          <li>
+            <label for="weather-input" class="weather-label label-setting">Weather</label>
+            <input type="checkbox" name="weather-input" id="weather-input">
+          </li>
+          <li>
+            <label for="player-input" class="player-label label-setting">Player</label>
+            <input type="checkbox" name="player-input" id="player-input">
+          </li>
+          <li>
+            <label for="functional-input" class="functional-label label-setting">Functioanl</label>
+            <input type="checkbox" name="functional-input" id="functional-input">
+          </li>
+        </ul>
+      </div>
+      <div class="settings">
+        <img src="./assets/svg/settings.svg" alt="Settings" class="settings-icon">
+        <!--<div class="settings-icon"></div>-->
+      </div>
+    </div>
+    <div class="quote-footer">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div class="links-shadow visibleSection visibleSectionNone">
+        <div class="list-link">
+          <div class="title-no-links">No links yet</div>
+          <button class="new-link">Add link</button>
+        </div>
+        <div class="add-link hidden">
+          <button class="prev-link"></button>
+          <label for="name-link" class="name-link-label">NAME</label>
+          <input type="text" name="name-link" id="name-link" class="link-input">
+          <label for="email-link" class="email-link-label">LINKS</label>
+          <input type="text" name="email-link" id="email-link" placeholder="example.com" class="link-input">
+          <button class="add-link-btn">Create</button>
+          <button class="edit-link-btn hidden">Edit</button>
+        </div>
+        <div class="my-links hidden">
+          <ul class="links-ul">
+            
+          </ul>
+          <div class="new-link-div">New link</div>
+        </div>
+      </div>
+      <div class="links-button">Links</div>
+    </div>
+  </footer>
+  <script src="js/script.js" type="module"></script>
+</body>
+</html>
